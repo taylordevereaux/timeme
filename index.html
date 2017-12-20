@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>timeme.io</title>
+  <meta name="viewport" content="width=device-width,
+                                   initial-scale=1.0,
+                                   maximum-scale=1.0,
+                                   user-scalable=no,
+                                   minimal-ui">
+  <!--  Styles  -->
+  <link rel="stylesheet" href="https://cdn.kik.com/app/3.0.0/app.min.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+  <div class="app-page" data-page="home" id="home">
+    <div class="app-topbar bg-transparent">
+      <div class="app-title">timeme.io</div>
+    </div>
+    <div id="content" class="app-content" data-no-scroll>
+      <div id="timer" class="app-section">
+        <label id="timerLabel"><span id="hourSpan">00</span>:<span id="minuteSpan">00</span>:<span id="secondSpan">00</span></label>
+      </div>
+      <div id="footer" class="app-section">
+        <div id="start-button" class="app-button bg-secondary-2">Start</div>
+        <div id="reset-button" class="app-button bg-secondary-1">Reset</div>
+        <div id="save-button" class="app-button bg-primary" data-target="timeEntry">Save</div>
+      </div>
+    </div>
+  </div>
+
+  <!--Entry Page-->
+
+  <div class="app-page" data-page="timeEntry" id="timeEntry">
+    <div class="app-topbar bg-primary">
+      <div class="left app-button" data-back data-autotitle></div>
+      <div class="app-title">Save Entry</div>
+    </div>
+    <div id="entryContent" class="app-content">
+      <div class="app-section">
+        <form>
+          <input class="app-input" placeholder="Title" name="title" />
+					<textarea class="app-input" name="description" placeholder="Description"></textarea>
+					<div class="app-button app-submit">Save</div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.kik.com/app/3.0.0/app.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

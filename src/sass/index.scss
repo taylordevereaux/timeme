@@ -1,0 +1,97 @@
+@import '_colors.scss';
+@import '_breakpoint';
+/**
+ * index.scss
+ * - Add any styles you want here!
+ */
+.bg-primary {
+  background-color: $color-primary-0;
+}
+.bg-secondary-1 {
+  background-color: $color-secondary-1-0;
+}
+.bg-secondary-2 {
+  background-color: $color-secondary-2-0;
+}
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-linear {
+  @extend .bg-primary;
+  background: linear-gradient(to bottom right, $gradient-1, $gradient-2);//, $color-primary-3); 
+}
+
+#home {
+  &.app-page {
+    @extend .bg-linear;
+  }
+}
+
+#entryContent {
+  &.app-content {
+    @extend .bg-linear;
+  }
+}
+
+.app-button {
+  &.bg-primary {
+    @extend .bg-primary;
+  }
+  &.bg-secondary-1 {
+    @extend .bg-secondary-1;
+  }
+  &.bg-secondary-2 {
+    @extend .bg-secondary-2;
+  }
+  &.bg-transparent {
+    @extend .bg-transparent;
+  }
+}
+
+.app-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  @extend .bg-transparent;
+}
+
+#timer {
+  text-align: center;
+  // &.app-section {
+  //   // background-color: rgba(255,255,255,0.2);
+  //   // color: #fff;
+  // }
+  &.app-section {
+    @extend .bg-transparent;
+    border: none;
+  }
+  #timerLabel {
+    color: #fff;
+    @include bp-up($bp-xs) {
+      font-size: 5em;
+    }
+    @include bp-up($bp-md) {
+      font-size: 10.125em;
+    }
+    @include bp-down($bp-xs+1) {
+      font-size: 4.5em;
+    }
+  }
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  
+  .app-button {
+    color: #fff;
+  }
+}
+

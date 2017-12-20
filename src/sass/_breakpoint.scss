@@ -1,0 +1,29 @@
+// Extra small devices (portrait phones, less than 576px)
+$bp-xs: 320px;
+// Small devices (landscape phones, less than 768px)
+$bp-sm: 576px;
+// Medium devices (tablets, 768px and up)
+$bp-md: 768px;
+// Large devices (desktops, 992px and up)
+$bp-lg: 992px;
+// Extra large devices (large desktops, 1200px and up)
+$bp-xl: 1200px;
+
+// Breakpoints based on min-width;
+@mixin bp-up($device-width) {
+  @media screen and (min-width: $device-width) {
+    @content 
+  }
+};
+// Breakpoints based on amx-width;
+@mixin bp-down($device-width) {
+  @media screen and (max-width: $device-width - 1) {
+    @content 
+  }
+};
+// Breakpoints based on min-width and max-width;
+@mixin bp($min-device-width, $max-device-width) {
+  @media screen and (min-width: $min-device-width) and (max-width: $max-device-width - 1) {
+    @content 
+  }
+};
