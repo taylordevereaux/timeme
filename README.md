@@ -1,6 +1,4 @@
-## Project is inactive and no longer worked on.
-
----
+#### Project is inactive and no longer worked on.
 
 ## A simple start/stop timer
 
