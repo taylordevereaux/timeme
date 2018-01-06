@@ -10,4 +10,4 @@
 
 ### Screenshots
 
-![Mobile Phone Screenshot](https://github.com/taylordevereaux/timeme/tree/master/readme_content/screenshot.png)
+![Mobile Phone Screenshot](/readme_content/screenshot.png?raw=true)
